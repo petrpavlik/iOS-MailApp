@@ -20,6 +20,7 @@ class ComposeEmailViewController: UIViewController, UITableViewDataSource, UITab
         tableView.separatorColor = UIColor(white: 71/255.0, alpha: 1)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.scrollEnabled = false
         
         tableView.registerClass(InputTableViewCell.classForCoder(), forCellReuseIdentifier: "InputTableViewCell")
         
@@ -68,7 +69,8 @@ class ComposeEmailViewController: UIViewController, UITableViewDataSource, UITab
         
         textView.addConstraint(NSLayoutConstraint(item: headerTableView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: textView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: -88))
         
-        textView.becomeFirstResponder()
+        //let toCell = headerTableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as InputTableViewCell
+        //toCell.valueTextField.becomeFirstResponder()
         
     }
     
@@ -95,7 +97,7 @@ class ComposeEmailViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCellWithIdentifier("InputTableViewCell", forIndexPath: indexPath) as InputTableViewCell
         
         if indexPath.row == 0 {
-            cell.titleLabel.text = "Recepients:"
+            cell.titleLabel.text = "To:"
         }
         else {
             cell.titleLabel.text = "Subject:"

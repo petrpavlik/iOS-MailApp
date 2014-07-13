@@ -40,6 +40,7 @@ class MailHeaderView: UIView {
     
     func configure() {
         
-        
+        self.addSubview(subjectLabel)
+        self.addSubview(fromLabel)
     }
 }

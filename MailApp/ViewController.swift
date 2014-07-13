@@ -16,14 +16,14 @@ class ViewController: UIViewController {
         
     //AuthManager.sharedInstance().configureWithClientId("442703748995-884gh0tnkjkm0508hriha8f7o8r1ipqr.apps.googleusercontent.com")
         
-        let signInButton = GoogleLoginWrapperView(frame: CGRect(x: 10, y: 300, width: 300, height: 44))
-        self.view.addSubview(signInButton)
-
-        
+        self.view.backgroundColor = UIColor(white: 51/255.0, alpha: 1)
+        self.view.tintColor = UIColor(red: 0.341, green: 0.671, blue: 1.000, alpha: 1)
         
         let button = UIButton.buttonWithType(.System) as UIButton
-        button.setTitle("Display Threads", forState: .Normal)
+        button.setTitle("Sign In", forState: .Normal)
         button.frame = CGRectMake(10, 100, 300, 44)
+        button.center = CGPointMake(view.center.x, view.center.y*0.9)
+        button.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.view.addSubview(button)
         
         button.addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
@@ -34,17 +34,25 @@ class ViewController: UIViewController {
         
         println("button tapped")
         
-        //UIApplication.sharedApplication().openURL(NSURL(string: "https://accounts.google.com/o/oauth2/auth?redirect_uri=me.petrpavlik.MailApp:/oauth2Callback&response_type=code&client_id=442703748995-884gh0tnkjkm0508hriha8f7o8r1ipqr.apps.googleusercontent.com&approval_prompt=force&access_type=offline&scope=https://mail.google.com/"))
+        /*AuthManager.sharedInstance().signInWithCompletionHandler(completionHandler: ((GmailAccessTokenEntity!, NSError!) -> Void)? {
+            
+            
+            })*/
         
-        //return
+        return
         
         let controller = ThreadsTableViewController(style: .Plain)
         
         let navigationController = NavigationController(rootViewController: controller)
+        navigationController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
         
         presentViewController(navigationController, animated: true, completion: nil)
+        
     }
 
 
+    override func preferredStatusBarStyle() -> UIStatusBarStyle  {
+        return UIStatusBarStyle.LightContent
+    }
 }
 

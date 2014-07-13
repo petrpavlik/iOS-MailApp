@@ -8,11 +8,12 @@
 
 #import "AuthManager.h"
 
-#import <GooglePlus/GooglePlus.h>
-#import <GoogleOpenSource/GoogleOpenSource.h>
 #import <AFNetworking.h>
+#import <Mantle.h>
 
-@interface AuthManager () <GPPSignInDelegate>
+@interface AuthManager ()
+
+@property(nonatomic, strong) void (^signInResultHandler)(GmailAccessTokenEntity* accessToken, NSError* error);
 
 @end
 
@@ -30,28 +31,58 @@
     return sharedManager;
 }
 
-- (void)configureWithClientId:(NSString*)clientId {
+- (void)signInWithCompletionHandler:(void (^)(GmailAccessTokenEntity* accessToken, NSError* error))completionHandler {
     
-    GPPSignIn *signIn = [GPPSignIn sharedInstance];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://accounts.google.com/o/oauth2/auth?redirect_uri=me.petrpavlik.MailApp:/oauth2Callback&response_type=code&client_id=442703748995-884gh0tnkjkm0508hriha8f7o8r1ipqr.apps.googleusercontent.com&approval_prompt=force&access_type=offline&scope=https://mail.google.com/"]];
     
-    signIn.clientID = clientId;
-    signIn.scopes = @[ kGTLAuthScopePlusLogin, @"https://mail.google.com/" ];
-    signIn.delegate = self;
-
+    self.signInResultHandler = completionHandler;
 }
 
 - (BOOL)openURL:(NSURL*)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation {
     
-    return [GPPURLHandler handleURL:url sourceApplication:sourceApplication annotation:annotation];
+    if ([sourceApplication isEqualToString:@"com.apple.mobilesafari"]) {
+        
+        if ([url.scheme isEqualToString:@"me.petrpavlik.mailapp"]) {
+            
+            NSString* code = [url.query stringByReplacingOccurrencesOfString:@"code=" withString:@""];
+            
+            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+            
+            NSMutableDictionary* params = [NSMutableDictionary new];
+            params[@"code"] = code;
+            params[@"client_id"] = @"442703748995-884gh0tnkjkm0508hriha8f7o8r1ipqr.apps.googleusercontent.com";
+            params[@"client_secret"] = @"";
+            params[@"redirect_uri"] = @"me.petrpavlik.MailApp:/oauth2Callback";
+            params[@"grant_type"] = @"authorization_code";
+            
+            [manager POST:@"https://accounts.google.com/o/oauth2/token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                
+                NSLog(@"JSON: %@", responseObject);
+                
+                NSError* error;
+                GmailAccessTokenEntity *accessToken = [MTLJSONAdapter modelOfClass:GmailAccessTokenEntity.class fromJSONDictionary:responseObject error:&error];
+                
+                
+                self.signInResultHandler(accessToken, error);
+                self.signInResultHandler = nil;
+                
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                
+                NSLog(@"Error: %@", error);
+                
+                self.signInResultHandler(nil, error);
+                self.signInResultHandler = nil;
+                
+            }];
+            
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 #pragma mark -
-
-- (void)finishedWithAuth:(GTMOAuth2Authentication *)auth
-                   error:(NSError *)error {
-    
-    NSLog(@"%@ %@", auth, error);
-}
 
 
 + (void)testLogin {

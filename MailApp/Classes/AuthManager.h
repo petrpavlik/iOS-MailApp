@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GmailAccessTokenEntity.h"
 
 @interface AuthManager : NSObject
 
 + (AuthManager*)sharedInstance;
 
 //- (void)authenticateWithCompletionHandler
+
+- (void)signInWithCompletionHandler:(void (^)(GmailAccessTokenEntity* accessToken, NSError* error))completionHandler;
 
 - (BOOL)openURL:(NSURL*)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation;
 
