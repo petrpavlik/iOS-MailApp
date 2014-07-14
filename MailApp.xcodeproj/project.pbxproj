@@ -10,6 +10,8 @@
 		4B36A1AA197060AB00D52C9E /* MailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B36A1A9197060AB00D52C9E /* MailHeaderView.swift */; };
 		4B36A1AD1971414D00D52C9E /* GmailAccessTokenEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B36A1AC1971414D00D52C9E /* GmailAccessTokenEntity.m */; };
 		4B36A1AF1971CC0C00D52C9E /* UnreadMailIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B36A1AE1971CC0C00D52C9E /* UnreadMailIndicatorView.swift */; };
+		4B59D6321973DA0200BC06FA /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B59D62B1973D9BB00BC06FA /* libMailCore-ios.a */; };
+		4B59D6341973DA1300BC06FA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B59D6331973DA1300BC06FA /* CFNetwork.framework */; };
 		4BB29434196F2F0200121F99 /* ComposeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB29433196F2F0200121F99 /* ComposeEmailViewController.swift */; };
 		4BB7494F196DD96B007B2CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7494E196DD96B007B2CF3 /* AppDelegate.swift */; };
 		4BB74951196DD96B007B2CF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB74950196DD96B007B2CF3 /* ViewController.swift */; };
@@ -17,9 +19,6 @@
 		4BB74956196DD96B007B2CF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB74955196DD96B007B2CF3 /* Images.xcassets */; };
 		4BB74962196DD96C007B2CF3 /* MailAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB74961196DD96C007B2CF3 /* MailAppTests.swift */; };
 		4BB74972196DFC66007B2CF3 /* AuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB74971196DFC66007B2CF3 /* AuthManager.m */; };
-		4BB74976196E88AC007B2CF3 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB74973196E88AC007B2CF3 /* GoogleOpenSource.framework */; };
-		4BB74977196E88AC007B2CF3 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BB74974196E88AC007B2CF3 /* GooglePlus.bundle */; };
-		4BB74978196E88AC007B2CF3 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB74975196E88AC007B2CF3 /* GooglePlus.framework */; };
 		4BB7497A196E896F007B2CF3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB74979196E896F007B2CF3 /* AddressBook.framework */; };
 		4BB7497C196E898C007B2CF3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7497B196E898C007B2CF3 /* MediaPlayer.framework */; };
 		4BB7497E196E8999007B2CF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7497D196E8999007B2CF3 /* UIKit.framework */; };
@@ -32,7 +31,6 @@
 		4BB7498C196E89D0007B2CF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7498B196E89D0007B2CF3 /* Foundation.framework */; };
 		4BB7498E196E89D7007B2CF3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7498D196E89D7007B2CF3 /* AssetsLibrary.framework */; };
 		4BBA9F2C1970227F00E67E83 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA9F2B1970227F00E67E83 /* MailViewController.swift */; };
-		4BD88F52196E8E4F001B4D4E /* GoogleLoginWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD88F51196E8E4F001B4D4E /* GoogleLoginWrapperView.m */; };
 		4BD88F54196EA002001B4D4E /* ThreadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD88F53196EA002001B4D4E /* ThreadTableViewCell.swift */; };
 		4BD88F56196ECB71001B4D4E /* ThreadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD88F55196ECB71001B4D4E /* ThreadsTableViewController.swift */; };
 		4BD88F5A196EF23D001B4D4E /* GmailThreadMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD88F59196EF23D001B4D4E /* GmailThreadMetadata.m */; };
@@ -42,6 +40,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4B59D6281973D9BB00BC06FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C64EA537169E772200778456;
+			remoteInfo = "static mailcore2 osx";
+		};
+		4B59D62A1973D9BB00BC06FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6BA2C191705F4E6003F0E9E;
+			remoteInfo = "static mailcore2 ios";
+		};
+		4B59D62C1973D9BB00BC06FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C64EA78C169F259200778456;
+			remoteInfo = tests;
+		};
+		4B59D62E1973D9BB00BC06FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6A81B911706840C00882C15;
+			remoteInfo = "test-ios";
+		};
+		4B59D6301973D9BB00BC06FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6BD288D170BD71100A91AC1;
+			remoteInfo = "mailcore osx";
+		};
+		4B59D6351973DA9D00BC06FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C6BA2B091705F4E6003F0E9E;
+			remoteInfo = "static mailcore2 ios";
+		};
 		4BB7495C196DD96B007B2CF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BB74941196DD96B007B2CF3 /* Project object */;
@@ -56,6 +96,8 @@
 		4B36A1AB1971414D00D52C9E /* GmailAccessTokenEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GmailAccessTokenEntity.h; path = Classes/GmailAccessTokenEntity.h; sourceTree = "<group>"; };
 		4B36A1AC1971414D00D52C9E /* GmailAccessTokenEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GmailAccessTokenEntity.m; path = Classes/GmailAccessTokenEntity.m; sourceTree = "<group>"; };
 		4B36A1AE1971CC0C00D52C9E /* UnreadMailIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnreadMailIndicatorView.swift; path = Classes/UnreadMailIndicatorView.swift; sourceTree = "<group>"; };
+		4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "mailcore2/build-mac/mailcore2.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		4B59D6331973DA1300BC06FA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4BB29433196F2F0200121F99 /* ComposeEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeEmailViewController.swift; path = Classes/ComposeEmailViewController.swift; sourceTree = "<group>"; };
 		4BB74949196DD96B007B2CF3 /* MailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB7494D196DD96B007B2CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,9 +111,6 @@
 		4BB7496B196DF6F3007B2CF3 /* MailApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		4BB74970196DFC66007B2CF3 /* AuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthManager.h; path = Classes/AuthManager.h; sourceTree = "<group>"; };
 		4BB74971196DFC66007B2CF3 /* AuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthManager.m; path = Classes/AuthManager.m; sourceTree = "<group>"; };
-		4BB74973196E88AC007B2CF3 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
-		4BB74974196E88AC007B2CF3 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
-		4BB74975196E88AC007B2CF3 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		4BB74979196E896F007B2CF3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		4BB7497B196E898C007B2CF3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4BB7497D196E8999007B2CF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -84,8 +123,6 @@
 		4BB7498B196E89D0007B2CF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BB7498D196E89D7007B2CF3 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4BBA9F2B1970227F00E67E83 /* MailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailViewController.swift; path = Classes/MailViewController.swift; sourceTree = "<group>"; };
-		4BD88F50196E8E4F001B4D4E /* GoogleLoginWrapperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleLoginWrapperView.h; path = Classes/GoogleLoginWrapperView.h; sourceTree = "<group>"; };
-		4BD88F51196E8E4F001B4D4E /* GoogleLoginWrapperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleLoginWrapperView.m; path = Classes/GoogleLoginWrapperView.m; sourceTree = "<group>"; };
 		4BD88F53196EA002001B4D4E /* ThreadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadTableViewCell.swift; path = Classes/ThreadTableViewCell.swift; sourceTree = "<group>"; };
 		4BD88F55196ECB71001B4D4E /* ThreadsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadsTableViewController.swift; path = Classes/ThreadsTableViewController.swift; sourceTree = "<group>"; };
 		4BD88F58196EF23D001B4D4E /* GmailThreadMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GmailThreadMetadata.h; path = Classes/GmailThreadMetadata.h; sourceTree = "<group>"; };
@@ -101,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B59D6341973DA1300BC06FA /* CFNetwork.framework in Frameworks */,
+				4B59D6321973DA0200BC06FA /* libMailCore-ios.a in Frameworks */,
 				4BB7498E196E89D7007B2CF3 /* AssetsLibrary.framework in Frameworks */,
 				4BB7498C196E89D0007B2CF3 /* Foundation.framework in Frameworks */,
 				4BB7498A196E89C6007B2CF3 /* CoreLocation.framework in Frameworks */,
@@ -112,8 +151,6 @@
 				4BB7497E196E8999007B2CF3 /* UIKit.framework in Frameworks */,
 				4BB7497C196E898C007B2CF3 /* MediaPlayer.framework in Frameworks */,
 				4BB7497A196E896F007B2CF3 /* AddressBook.framework in Frameworks */,
-				4BB74976196E88AC007B2CF3 /* GoogleOpenSource.framework in Frameworks */,
-				4BB74978196E88AC007B2CF3 /* GooglePlus.framework in Frameworks */,
 				AA36C8D8F4F74B3BAD105270 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +168,7 @@
 		0D9BAE2148CA4C64A13CED8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B59D6331973DA1300BC06FA /* CFNetwork.framework */,
 				4BB7498D196E89D7007B2CF3 /* AssetsLibrary.framework */,
 				4BB7498B196E89D0007B2CF3 /* Foundation.framework */,
 				4BB74989196E89C6007B2CF3 /* CoreLocation.framework */,
@@ -142,17 +180,27 @@
 				4BB7497D196E8999007B2CF3 /* UIKit.framework */,
 				4BB7497B196E898C007B2CF3 /* MediaPlayer.framework */,
 				4BB74979196E896F007B2CF3 /* AddressBook.framework */,
-				4BB74973196E88AC007B2CF3 /* GoogleOpenSource.framework */,
-				4BB74974196E88AC007B2CF3 /* GooglePlus.bundle */,
-				4BB74975196E88AC007B2CF3 /* GooglePlus.framework */,
 				875657AE87C042ABABB4DC1D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B59D6211973D9BB00BC06FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B59D6291973D9BB00BC06FA /* libMailCore.a */,
+				4B59D62B1973D9BB00BC06FA /* libMailCore-ios.a */,
+				4B59D62D1973D9BB00BC06FA /* tests */,
+				4B59D62F1973D9BB00BC06FA /* test-ios.app */,
+				4B59D6311973D9BB00BC06FA /* MailCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4BB74940196DD96B007B2CF3 = {
 			isa = PBXGroup;
 			children = (
+				4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */,
 				4BB7494B196DD96B007B2CF3 /* MailApp */,
 				4BB7495E196DD96B007B2CF3 /* MailAppTests */,
 				4BB7494A196DD96B007B2CF3 /* Products */,
@@ -227,8 +275,6 @@
 		4BD88F4F196E8E2B001B4D4E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4BD88F50196E8E4F001B4D4E /* GoogleLoginWrapperView.h */,
-				4BD88F51196E8E4F001B4D4E /* GoogleLoginWrapperView.m */,
 				4BD88F53196EA002001B4D4E /* ThreadTableViewCell.swift */,
 				4BD88F5E196F2AF5001B4D4E /* InputTableViewCell.swift */,
 				4B36A1A9197060AB00D52C9E /* MailHeaderView.swift */,
@@ -272,6 +318,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4B59D6361973DA9D00BC06FA /* PBXTargetDependency */,
 			);
 			name = MailApp;
 			productName = MailApp;
@@ -325,6 +372,12 @@
 			mainGroup = 4BB74940196DD96B007B2CF3;
 			productRefGroup = 4BB7494A196DD96B007B2CF3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4B59D6211973D9BB00BC06FA /* Products */;
+					ProjectRef = 4B59D6201973D9BB00BC06FA /* mailcore2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4BB74948196DD96B007B2CF3 /* MailApp */,
@@ -333,13 +386,50 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		4B59D6291973D9BB00BC06FA /* libMailCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMailCore.a;
+			remoteRef = 4B59D6281973D9BB00BC06FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B59D62B1973D9BB00BC06FA /* libMailCore-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMailCore-ios.a";
+			remoteRef = 4B59D62A1973D9BB00BC06FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B59D62D1973D9BB00BC06FA /* tests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = tests;
+			remoteRef = 4B59D62C1973D9BB00BC06FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B59D62F1973D9BB00BC06FA /* test-ios.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "test-ios.app";
+			remoteRef = 4B59D62E1973D9BB00BC06FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B59D6311973D9BB00BC06FA /* MailCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MailCore.framework;
+			remoteRef = 4B59D6301973D9BB00BC06FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		4BB74947196DD96B007B2CF3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4BB74954196DD96B007B2CF3 /* Main.storyboard in Resources */,
-				4BB74977196E88AC007B2CF3 /* GooglePlus.bundle in Resources */,
 				4BB74956196DD96B007B2CF3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +486,6 @@
 				4BB74951196DD96B007B2CF3 /* ViewController.swift in Sources */,
 				4BD88F5D196F11E7001B4D4E /* NavigationController.swift in Sources */,
 				4B36A1AD1971414D00D52C9E /* GmailAccessTokenEntity.m in Sources */,
-				4BD88F52196E8E4F001B4D4E /* GoogleLoginWrapperView.m in Sources */,
 				4B36A1AF1971CC0C00D52C9E /* UnreadMailIndicatorView.swift in Sources */,
 				4BD88F56196ECB71001B4D4E /* ThreadsTableViewController.swift in Sources */,
 				4BD88F54196EA002001B4D4E /* ThreadTableViewCell.swift in Sources */,
@@ -419,6 +508,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4B59D6361973DA9D00BC06FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "static mailcore2 ios";
+			targetProxy = 4B59D6351973DA9D00BC06FA /* PBXContainerItemProxy */;
+		};
 		4BB7495D196DD96B007B2CF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4BB74948196DD96B007B2CF3 /* MailApp */;
@@ -521,6 +615,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,6 +623,40 @@
 				);
 				INFOPLIST_FILE = MailApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					Accelerate,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreTelephony,
+					"-framework",
+					Foundation,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+					"-lctemplate-ios",
+					"-letpan-ios",
+					"-licudata",
+					"-licui18n",
+					"-licuuc",
+					"-lxml2",
+					"-lsasl2",
+					"-liconv",
+					"-ltidy",
+					"-lz",
+					"-lstdc++",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LIBTOOLFLAGS = "-lctemplate-ios -letpan-ios -licudata -licui18n -licuuc -lxml2 -lsasl2 -liconv -ltidy -lz -licucore -lstdc++ -stdlib=libstdc++ -ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MailApp/MailApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -540,6 +669,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,6 +677,40 @@
 				);
 				INFOPLIST_FILE = MailApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					Accelerate,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreTelephony,
+					"-framework",
+					Foundation,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+					"-lctemplate-ios",
+					"-letpan-ios",
+					"-licudata",
+					"-licui18n",
+					"-licuuc",
+					"-lxml2",
+					"-lsasl2",
+					"-liconv",
+					"-ltidy",
+					"-lz",
+					"-lstdc++",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LIBTOOLFLAGS = "-lctemplate-ios -letpan-ios -licudata -licui18n -licuuc -lxml2 -lsasl2 -liconv -ltidy -lz -licucore -lstdc++ -stdlib=libstdc++ -ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MailApp/MailApp-Bridging-Header.h";
 			};
